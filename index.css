@@ -1,0 +1,270 @@
+/* INICIOOOOOOOOO */
+
+/* Cor de fundo */
+body {
+  background-color: #3b3f58; 
+  margin: 0;
+  font-family: 'Verdana', sans-serif;
+}
+/* === SIDEBAR LATERAL ESQUERDA === */
+.wiki-sidebar {
+  position: fixed;  /* Fixa na lateral */
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background-color: #1b1c29; /* Fundo da sidebar */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+/* Título do topo da sidebar */
+.nome-inicio {
+  background-color: #e20157;
+  width: fit-content;
+  padding: 18px 35px 16px 34px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.nome-inicio::before,
+.nome-inicio::after {
+  content: "✦";
+  margin: 0 5px;
+}
+/* Imagem do personagem (na sidebar) */
+.imagem-personagem {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+/* Nome abaixo da imagem */
+.nome-personagem {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+/* Lista de links */
+.links {
+  width: 100%;
+  padding: 0 15px 20px 15px; /* reduzido para caber na sidebar */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.link:hover {
+  background-color: #3b3f58;
+}
+.link i {
+  margin-right: 8px;
+  width: 16px;
+  text-align: center;
+}
+
+/* === Container principal === */
+.wiki-container {
+  margin-left: 260px; /* Espaço da sidebar */
+  padding: 90px;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: 270px;
+  background-color: #2b2d42;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* === Aba de navegação === */
+.wiki-tabs {
+  display: flex;
+  gap: 30px;              /* Mais espaço entre as abas */
+  margin-top: -70px;      /* Sobe as abas */
+  margin-bottom: 70px;    /* Espaço abaixo delas */
+  justify-content: flex-start;
+}
+.wiki-tab {
+  background-color: #ff297b; /* rosa claro */
+  padding: 16px 35px;        /* Maior altura/largura */
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 25px;           /* Fonte maior */
+  cursor: pointer;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+.wiki-tab:hover {
+  background-color: #e20157;
+  transform: translateY(-2px); /* leve efeito ao passar o mouse */
+}
+
+/* === CONTAINER DE CONTEÚDO COM IMAGEM === */
+.info-container {
+  background-color: #3b3f58;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+/* Imagem com borda rosa gradiente */
+.info-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 6px solid;
+  border-image: linear-gradient(to bottom, #ff337b, #720026) 1;
+}
+/* Conteúdo de texto com rolagem, altura fixa */
+.info-text-scroll {
+  max-height: 180px;       /* igual à altura da imagem */
+  overflow-y: auto;
+  padding-right: 10px;     /* espaço pro scroll */
+  flex: 1;
+}
+/* Scrollbar estilizada (opcional e compatível com WebKit) */
+.info-text-scroll h2 {
+  color: #e03daf; /* rosa igual às abas */
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.info-text-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.info-text-scroll::-webkit-scrollbar-thumb {
+  background-color: #e20157;
+  border-radius: 10px;
+}
+.info-text-scroll::-webkit-scrollbar-track {
+  background-color: #15161d;
+}
+/* Item da lista */
+.info-item {
+  padding: 6px 0;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* linha branca suave abaixo */
+  position: relative;
+}
+/* Parte da esquerda */
+.info-label {
+  font-weight: bold;
+  color: #fd5294;
+  min-width: 100px;
+}
+/* Parte da direita */
+.info-item span + span {
+  color: #ffffff;
+  flex: 1;
+}
+
+/* === Parte com curiosidades === */
+.curiosidades-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 30px; /* aumentei o espaço acima */
+  margin-top: 30px;   /* separação visual clara */
+}
+/* Box central */
+.curiosidades-box {
+  background-color: #3b3f58; /* mesma cor dos outros containers */
+  padding: 30px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+/* Título */
+.curiosidades-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+/* Lista */
+.curiosidades-box ul {
+  list-style: disc;
+  padding-left: 25px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #ffffff;
+}
+/* Link da musica */
+.curiosidades-box a {
+  color: #ff297b;
+  text-decoration: underline;
+}
+/* Imagens brou */
+.curiosidade-img {
+  display: block;
+  margin: 30px auto 0 auto;
+  max-width: 80%;
+  border: 4px solid;
+  border-image: linear-gradient(to bottom, #ff337b, #720026) 1;
+}
+
+/* === cor dos titulos === */
+.wiki-container h2 {
+  color: #ff297b; 
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* === Imagem que toca musica=== */ 
+.musica-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.musica-imagem {
+  width: 120px;
+  height: 200px;
+  cursor: pointer;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.musica-imagem:hover {
+  transform: scale(1.05);
+}
+
+.imagem-fixa-canto {
+  position: fixed;
+  bottom: 20px;
+  right: 7px;
+  width: 200px;
+  height: auto;
+  z-index: 9999;
+  cursor: pointer;
+  border: none;
+}
