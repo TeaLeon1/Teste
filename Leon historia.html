@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wiki leon</title>
+  <link rel="stylesheet" type="text/css" href="Leon historia.css"> <!-- CSS externo -->
+</head>
+<body>
+  
+  <!-- === SIDEBAR === -->
+  <div class="wiki-sidebar">
+    <div class="nome-inicio">Principal</div>
+    <img class="imagem-personagem" src="https://i.pinimg.com/736x/2a/c9/66/2ac96635f34548863d42de5b3ba3fa5e.jpg">
+    <div class="nome-personagem">Leon 💣</div>
+    <div class="links">
+      <a href="#" class="link">Galeria</a>
+      <a href="#" class="link">Versões</a>
+      <a href="#" class="link">Ligações</a>
+    </div>
+  </div>
+
+  <!-- === CONTAINER CENTRAL COM AS ABAS E A IMAGEM === -->
+<div class="wiki-container">
+  <div class="wiki-tabs">
+    <a href="leon inicio.html" class="wiki-tab">Início</a>
+    <a href="Leon informações.html" class="wiki-tab">Mais Informações</a>
+    <a href="Leon historia.html" class="wiki-tab">História</a>
+  </div>
+
+  <!-- Blocos organizados com espaço entre eles -->
+<div class="main-info-blocks">
+
+  <!-- CONTEÚDO DOS DOIS CONTAINERS -->
+<div class="main-info-blocks">
+
+  <!-- Primeiro bloco -->
+  <div class="custom-info-box">
+    <img src="IMAGEM_URL_1" alt="Imagem de exemplo" class="custom-img">
+    <div class="custom-content">
+      <div class="custom-title">Passado</div>
+      <div class="custom-scroll">
+        <p><strong>CULPA DO RALPH!!!!!</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Segundo bloco (imagem à direita com reverse) -->
+  <div class="custom-info-box reverse">
+    <img src="IMAGEM_URL_2" alt="Imagem de exemplo" class="custom-img">
+    <div class="custom-content">
+      <div class="custom-title">Gloriosa Ck</div>
+      <div class="custom-scroll">
+        <p>Quando tinha 6 anos, Leon acordou ao lado de uma lata de lixo, Ichi o achou jogado lá dentro e por motivos de sim
+           decidiu adotá-lo e o levou para o paraiso dos calangos. Ichi deixou ele sozinho lá no meio da casa e fds, se vira mlk kk. 
+           Depois de um tempo, Leon conheceu seus tios, Ni e Kevin, seu amigo Moon, e seu brinquedo de teste favorito, Ralph. Muito tempo depois, 
+           ele descobriu que tinha uma irmã chamada Ichilla (ele nem sabia que ela existia, kkk)</p>
+      </div>
+    </div>
+  </div>
+
+   <!-- Primeiro bloco -->
+  <div class="custom-info-box">
+    <img src="IMAGEM_URL_1" alt="Imagem de exemplo" class="custom-img">
+    <div class="custom-content">
+      <div class="custom-title">Guerra do Rpv!</div>
+      <div class="custom-scroll">
+        <p> Leon com seus 14 anos junto de Ni, Ralph e Moon começam uma guerra contra a galera do Rpv, durante
+           a guerra o Leon lutou com o mais forte da era moderna The egg, e após uma luta do krl que chegou a romper o multiverso, Leon consegue vencer
+            The egg e volta para a ck sendo o mais forte de todas as eras (Gojo e sukuna reference).</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Segundo bloco (imagem à direita com reverse) -->
+  <div class="custom-info-box reverse">
+    <img src="IMAGEM_URL_2" alt="Imagem de exemplo" class="custom-img">
+    <div class="custom-content">
+      <div class="custom-title">Segunda guerra do Rpv e torneio</div>
+      <div class="custom-scroll">
+        <p>Um tempo se passa e a galera do rpv volta querendo vingança, Leon descide lugar contra o novo mais forte da era moderna do grupo,
+          Souzones, após outra luta do krl, Souzones saiu vitorioso e e jogou o leon igual bosta de volta pra ck. Apos essa derrota, Leon adiquiriu depressão 3 pois nunca tinha perdido antes,
+          mas Ichilla o ajudou a se recuperar.
+
+           <p>Meses depois foi realizado um torneio da Tropa da Ck vs Galera do Rpv. Leon caiu contra a Nezuko e não levou a luta
+           muito a serio pois achou que já tava ganha, mas acabou perdendo porque saiu 2 funking Cm para fora da arena (RALPH É UM ANIMAL!!), ele
+           novamente ficou mal pela derrota mas se recuperou bem rapidinho.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1 bloco -->
+  <div class="custom-info-box">
+    <img src="IMAGEM_URL_1" alt="Imagem de exemplo" class="custom-img">
+    <div class="custom-content">
+      <div class="custom-title">kkkkkk</div>
+      <div class="custom-scroll">
+        <p><strong>ha ha ha ha </strong>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2 bloco  -->
+  <div class="custom-info-box reverse">
+    <img src="IMAGEM_URL_2" alt="Imagem de exemplo" class="custom-img">
+    <div class="custom-content">
+      <div class="custom-title">errei fui fds</div>
+      <div class="custom-scroll">
+        <p>ookiku aita kuroi ana wakaru wakaru wakaru </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Imagem clicável no canto da tela -->
+<img
+  src="https://i.imgur.com/QuUdibW.png"  
+  alt="Mizutsune"
+  class="imagem-fixa-canto"
+  onclick="tocarOuPararMusica()"
+/>
+
+<audio id="audio-musica">
+  <source src="c:\Users\Force\Downloads\㋰責任集合体／重音テトSV.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const audio = document.getElementById('audio-musica');
+
+  function tocarOuPararMusica() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  }
+  // Garante que a música NÃO reinicie automaticamente
+  audio.loop = false;
+</script>
